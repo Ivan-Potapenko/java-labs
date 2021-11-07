@@ -1,17 +1,40 @@
 public class Rectangle  implements Shape {
 
-    @Override
-    public ShapeType getType() {
-        return null;
+    double a, b;
+
+    Rectangle()
+    {
+        a = 0;
+        b = 0;
+    }
+
+    Rectangle(double a)
+    {
+        this.a = a;
+        this.b = a;
+    }
+
+    Rectangle(double a, double b)
+    {
+        this.a = a;
+        this.b = b;
     }
 
     @Override
-    public float getPerimeter() {
-        return 0;
+    public double getArea()
+    {
+        return a*b;
     }
 
     @Override
-    public float getArea() {
-        return 0;
+    public double getPerimeter()
+    {
+        return 2*(a+b);
+    }
+
+    @Override
+    public ShapeType getType()
+    {
+        return ShapeType.RECTANGLE;
     }
 }

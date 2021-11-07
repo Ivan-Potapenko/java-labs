@@ -1,6 +1,6 @@
 public interface Shape {
 
-    float getArea();
-    float getPerimeter();
+    double getArea();
+    double getPerimeter();
     ShapeType getType();
 }

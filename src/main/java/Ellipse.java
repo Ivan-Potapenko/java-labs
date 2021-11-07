@@ -1,22 +1,31 @@
-public class Ellipse implements Shape, WithRadius {
+public class Ellipse implements Shape {
 
-    @Override
-    public float getArea() {
-        return 0;
+    double a, b;
+
+    Ellipse()
+    {
+        a=0;
+        b=0;
+    }
+
+    Ellipse(double a, double b)
+    {
+        this.a = a;
+        this.b = b;
     }
 
     @Override
-    public float getPerimeter() {
-        return 0;
+    public double getArea() {
+        return Math.PI * a * b;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 4 * (Math.PI * a * b + Math.pow((a - b), 2)) / (a + b);
     }
 
     @Override
     public ShapeType getType() {
-        return null;
-    }
-
-    @Override
-    public double getRadius() {
-        return 0;
+        return ShapeType.ELLIPSE;
     }
 }
